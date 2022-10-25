@@ -18,13 +18,13 @@ body {
   display: flex;
   justify-content:space-between;
   transition: height 0.5s, width 0.5s;
-  transition-delay:0s 0.75s;
+  transition-delay:0s, 0.75s;
   overflow: hidden;
 }
 .navigation.active {
   width: 300px; height: 400px;
   transition: width 0.5s, height 0.5s;
-  transition-delay:0s 0.75s;
+  transition-delay:0s, 0.75s;
 }
 .navigation .userBx {
   position: relative;
