@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Scrolling Website</title>
+  <link rel="stylesheet" href="stle.css">
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">Logo</a>
+    <ul class="navigation">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
+  <section class="parallax">
+    <h2 id="text">Parallax Wesite</h2>
+    <img src="/monutain_01.png" id="m1">
+    <img src="/trees_02.png" id="t2">
+    <img src="/monutain_02.png" id="m2">
+    <img src="/trees_01.png" id="t1">
+    <img src="/man.png" id="man">
+    <img src="/plants.png" id="plants">
+  </section>
+  <section class="sec">
+    <h2>Parallax Scrolling Website</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, odit corporis ex iste nulla quaerat ad expedita doloremque! Earum voluptate adipisci ut at qui. Doloribus, at quo veritatis sit blanditiis itaque tempora aperiam sint eaque nobis asperiores hic repellendus. Perferendis rerum minima commodi minus reprehenderit fuga explicabo, magni quidem asperiores quod quisquam quam quas, odio dignissimos praesentium officiis dolor, sunt laborum animi iusto beatae illum. Enim, beatae. Magnam, corporis odio praesentium magni quasi sit ipsa doloribus, repudiandae at enim optio facilis culpa, nihil deleniti minima fugiat quos reprehenderit aspernatur nobis nesciunt exercitationem officiis? Cum hic, placeat repellat quasi perspiciatis non illum excepturi tempora eos neque magni officia. Neque voluptates quaerat ut. Quibusdam beatae, sit eligendi, assumenda voluptates nostrum, autem nobis saepe hic harum earum quaerat architecto repellat.<br /><br />Debitis delectus alias veritatis enim architecto rem nostrum doloribus fuga molestiae ea nobis eaque quibusdam ab voluptates quaerat, ut nisi quas, quia consectetur natus. Provident fugit error cumque excepturi aut facere quas ex accusantium sunt reprehenderit voluptas aliquam repellat nobis rerum dolorem asperiores nisi voluptatum beatae neque, unde quibusdam molestiae? Tenetur velit earum animi voluptas error, repudiandae dolore quidem veritatis quas molestias placeat numquam consequuntur voluptatum eius minima debitis? Ut veritatis maiores blanditiis eveniet ad fugiat quisquam! Possimus dicta odio quae quod hic placeat voluptatem provident incidunt, harum fugit dolorem, aut voluptas, nobis delectus aliquam. Praesentium assumenda in facere suscipit impedit velit neque. Maiores id vitae nisi eius. Ab ipsum, rem mollitia nobis libero ducimus necessitatibus accusantium expedita voluptatibus. Harum, iusto. Hic, repellendus qui. Necessitatibus quis in molestiae perspiciatis praesentium, dolores totam ad? Rem nulla perferendis quidem recusandae provident commodi, molestiae pariatur, maiores porro fugiat officia nihil suscipit adipisci alias iure laboriosam, magnam itaque praesentium voluptatibus aliquam fuga magni! Laudantium corrupti ea, optio officiis maiores reiciendis possimus aliquam dignissimos explicabo animi delectus excepturi veniam id modi ipsum consequuntur praesentium a odio dicta cumque, culpa veritatis. Dicta dolores ad rerum.<br /><br />Assumenda utnecessitatibus, nesciunt doloribus illo quas tempora explicabo quia modi porro nobis corporis. Quibusdam ex repellendus, beatae, pariatur itaque, quisquam ut mollitia iure reiciendis corporis sed minus ducimus voluptatem aliquid. Sapiente nobis molestiae, provident similique quas totam quisquam laudantium id? Dolorem impedit incidunt sapiente quo culpa, sit minus ex, odio, assumenda quis laboriosam excepturi aut et quaerat consequatur non iusto suscipit ad facilis eius? Labore recusandae dolorum eos tempore suscipit amet dolor unde, ducimus sapiente adipisci sunt aliquam eaque iure explicabo dolorem, aut alias vero perferendis quod distinctio consequuntur voluptate provident. Officiis sit nam nulla labore culpa aspernatur enim eligendi corporis reprehenderit adipisci facilis nemo quisquam quidem id impedit exercitationem vel et nostrum soluta totam, maxime blanditiis repudiandae iusto aperiam? Voluptatibus alias debitis quod blanditiis minus vero exercitationem non culpa temporibus illum repellendus omnis eligendi tenetur perferendis, eos quis, ipsa ab consequatur. Sunt fugit minus explicabo, inventore porro dignissimos optio repellendus et, distinctio quas aliquam, ab iste sint id temporibus perspiciatis hic. Quidem iure rerum iusto laudantium eos culpa consequuntur facere suscipit voluptatibus enim, similique molestias nostrum vel sunt ab eveniet sint dolor!</p>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.from('#m1',{
+      scrollTrigger : {
+        scrub: true
+      },
+      y:100
+    })
+    gsap.from('#m2',{
+      scrollTrigger : {
+        scrub: true
+      },
+      y:50
+    })
+    gsap.from('#t2',{
+      scrollTrigger : {
+        scrub: true
+      },
+      x:-50
+    })
+    gsap.from('#t1',{
+      scrollTrigger : {
+        scrub: true
+      },
+      x:50
+    })
+    gsap.from('#man',{
+      scrollTrigger : {
+        scrub: true
+      },
+      x:-250
+    })
+    gsap.from('#plants',{
+      scrollTrigger : {
+        scrub: true
+      },
+      x:-50
+    })
+    gsap.from('#text',{
+      scrollTrigger : {
+        scrub: true
+      },
+      x:600
+    })
+  </script>
+</body>
+</html>
