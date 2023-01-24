@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Clock</title>
+</head>
+<body>
+  <div class="clock">
+    <div class="numbers">
+      <span style="--i:0;"><b>12</b></span>
+      <span style="--i:1;"><b>3</b></span>
+      <span style="--i:2;"><b>6</b></span>
+      <span style="--i:3;"><b>9</b></span>
+      <div class="circle" id="hr"><i></i></div>
+      <div class="circle" id="mn"><i></i></div>
+      <div class="circle" id="sc"><i></i></div>
+    </div>
+    </div>
+  </div>
+
+  <script>
+    // 변수 선언
+    const hr = document.querySelector("#hr");
+    const mn = document.querySelector("#mn");
+    const sc = document.querySelector("#sc");
+    
+    setInterval(()=>{
+      let day = new Date(); // 날짜 함수 생성
+      let hh = day.getHours() * 30; // 시간 추출 * 60 
+      let mm = day.getMinutes() * 6; // 분 추출 * 6
+      let ss = day.getSeconds() * 6; // 초 추출 * 6
+    
+      hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`; // hr의 transform 속성 중 ${hh+(mm/12)}deg 만큼 이동
+      mn.style.transform = `rotateZ(${mm}deg)`; // mn의 transform 속성 중 rotateZ${mm}deg 만큼 이동 
+      sc.style.transform = `rotateZ(${ss}deg)`; // sc의 transform 속성 중 rotateZ${ss}deg 만큼 이동 
+    });
+  </script>
+</body>
+</html>
